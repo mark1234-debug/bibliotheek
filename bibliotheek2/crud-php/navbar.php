@@ -13,7 +13,7 @@ if ($role === 'Admin' ) {echo
 <!-- de links in de navbar -->
       <a class="active" href="index.php" >Home</a>
       <a href="admin-pannel.php">admin pannel</a>
-      <a href="book_details.php">Boeken</a>
+      <a href="view/read.php">Boeken</a>
       <a href="../account/login/login.php">inloggen/registreren</a>
       <a href="">Reservaties (komt nog)</a>
       <!--<a href="../account (1)/login/login.php" target="_blank" rel="noopener noreferrer">inloggen</a>-->
