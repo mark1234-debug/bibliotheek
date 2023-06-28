@@ -39,15 +39,8 @@ if (isset($_GET['id'])) {
     <title>Book Details</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="nav-item"><a href="../index.php">Home</a></div>
-        <div class="nav-item"><a href="../../account (1)/login/login.php">Login</a></div>
-        <div class="nav-item"><a href="#">Services</a></div>
-        <div class="nav-item"><a href="#">Contact</a></div>
-        <?php if (isset($_SESSION['role']) && ($_SESSION['role'] == 'Medewerker' || $_SESSION['role'] == 'Admin')) { ?>
-            <div class="nav-item"><a href="../view/create.php">Create</a></div>
-        <?php } ?>
-    </div>
+    
+<?php require_once("navbar.php") ?>
 
     <div class="container">
         <h1>Book Details</h1>
