@@ -42,9 +42,10 @@
             <label for="phone">
                 <i class="fas fa-phone"></i>
             </label>
-            <input type="tel" name="phone_number" placeholder="Phone Number" id="phone_number" required>
-            <br><br><br>
-            <button class='logi'><a href="\account/login/login.php">Login</a></button>
+            <input type="text" name="phone_number" placeholder="Phone Number" id="phone_number" required>
+            <br><br>
+            <button class="signup"><a href="../login/login.php">login</a></button>
+            <button class="terug"><a href="../../crud-php/index.html">terug</a></button>
             <input type="submit" value="Register">
         </form>
     </div>
