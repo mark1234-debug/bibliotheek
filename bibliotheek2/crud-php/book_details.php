@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include "db_conn.php";
 include "crud-php/model/readmodel.php";
