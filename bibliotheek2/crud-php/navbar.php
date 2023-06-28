@@ -16,11 +16,8 @@ if ($role === 'Admin' ) {echo
       <a class="active" href="" >Home</a>
       <a href="admin-pannel.php">admin pannel</a>
       <a href="view/read.php">Boeken</a>
-<<<<<<< HEAD
       <a href="../account (1)\logout.php">log uit</a>
-=======
       <a href="../account/login/login.php">inloggen/registreren</a>
->>>>>>> 89d498b99f6e65451bed3f55cf3c7fc4920c58a8
       <a href="">Reservaties (komt nog)</a>
   </div>
     </div>';
