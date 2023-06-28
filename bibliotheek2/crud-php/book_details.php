@@ -2,7 +2,7 @@
 session_start();
 
 include "db_conn.php";
-include "crud-php\model\readmodel.php";
+include "crud-php/model/readmodel.php";
 
 if (isset($_GET['id'])) {
     $boek_id = $_GET['id'];
