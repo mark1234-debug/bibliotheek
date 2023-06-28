@@ -1,5 +1,5 @@
 <?php
-include "C:\wamp64\www\crud-php\db_conn.php";
+include "../db_conn.php";
 
 function getFilteredBooks($filter, $filter_query)
 {

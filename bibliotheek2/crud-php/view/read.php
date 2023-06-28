@@ -33,6 +33,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     <link rel="stylesheet" href="../style.css">
     <title>Crud</title>
 </head>
+
 <body>
     <div class="navbar">
         <div class="nav-item"><a href="../index.html">Home</a></div>
@@ -43,6 +44,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
             <div class="nav-item"><a href="../view/create.php">Create</a></div>
         <?php } ?>
     </div>
+    
 <!--filter systeem-->
     <div class="sidebar">
         <h2>Filters</h2>
