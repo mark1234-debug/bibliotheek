@@ -4,9 +4,9 @@ include "db_conn.php";
 
 $role = $_SESSION['role'] ?? '';
 
-<<<<<<< HEAD
+
 // hierboven wordt de rol van de gebruiker gecontroleerd als deze bestaat
-=======
+
 // hierboven word de rol van de user gechecked als deze bestaat
 
 
@@ -61,7 +61,7 @@ if ($role === 'Admin') {
         </div>
     </div>';
 }
->>>>>>> c83a5d4c1371a046ccf09c6c54eceba9ec27d3ae
+
 
 // if ($role === 'Admin') {
 //     echo '<div class="header">
