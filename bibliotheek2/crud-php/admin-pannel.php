@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<?php $_SESSION['activeTab'] = 'admin'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); ?>
+<?php session_start(); $_SESSION['activeTab'] = 'admin'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); ?>
 
 <div class="tab">
   <button class="tablinks" onclick="openPopup('./view/schrijvercrudview.php')">Schrijver CRUD</button>
