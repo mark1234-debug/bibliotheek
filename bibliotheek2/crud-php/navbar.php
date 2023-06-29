@@ -13,11 +13,11 @@ if ($role === 'Admin' ) {echo
 <!-- de navbar in de header -->
 <div class="navbar">
 <!-- de links in de navbar -->
-      <a class="active" href="" >Home</a>
+      <a class="active" href="index.php" >Home</a>
       <a href="admin-pannel.php">admin pannel</a>
       <a href="view/read.php">Boeken</a>
-      <a href="../account (1)\logout.php">log uit</a>
-      <a href="../account/login/login.php">inloggen/registreren</a>
+      <a href="../account/logout.php">log uit</a>
+      <a href="/account/login/login.php">inloggen/registreren</a>
       <a href="">Reservaties (komt nog)</a>
   </div>
     </div>';
