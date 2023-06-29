@@ -32,12 +32,11 @@ if ($stmt = $conn->prepare('SELECT user_id, password, role FROM accounts WHERE u
     if (password_verify($_POST['password'], $password)) {
       // Verification success! User has logged in!
       // Create sessions, so we know the user is logged in. They act like cookies but remember the data on the server.
-      session_regenerate_id();
       $_SESSION['loggedin'] = true;
       $_SESSION['name'] = $_POST['username'];
       $_SESSION['id'] = $id;
       $_SESSION['role'] = $role; // Store the role in the sessions
-      // Redirect the user to the desired page based on their role.
+      // Redirect the user to the homepage based on their role.
       if ($role === 'Lezer' || $role === 'Medewerker' || $role === 'Admin') {
         header('Location: ../../crud-php/index.php');
       } else {
