@@ -19,6 +19,9 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     $sql = "SELECT boeken.*, images.image_path FROM boeken LEFT JOIN images ON boeken.boek_id = images.boek_id";
+  include("../navbar.php");
+
+
 }
 ?>
 
@@ -31,8 +34,14 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     <link rel="stylesheet" href="../style.css">
     <title>Crud</title>
 </head>
+    
 
-<body>
+
+<body> 
+<?php
+  include("../navbar.php")
+  ?>
+
     <div class="navbar">
         <div class="nav-item"><a href="../index.php">Home</a></div>
         <div class="nav-item"><a href="../../account/login/login.php">Login</a></div>
@@ -42,7 +51,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
             <div class="nav-item"><a href="../view/create.php">Create</a></div>
         <?php } ?>
     </div>
-    
+
 <!--filter systeem-->
     <div class="sidebar">
         <h2>Filters</h2>
