@@ -4,25 +4,18 @@ include "db_conn.php";
 
 $role = $_SESSION['role'] ?? '';
 
-<<<<<<< HEAD
-// hierboven wordt de rol van de gebruiker gecontroleerd als deze bestaat
-=======
-// hierboven word de rol van de user gechecked als deze bestaat
-
-
 if ($role === 'Admin') {
     echo '<div class="header">
         <h1 style="float: left;">FIRDA admin</h1>
-<!-- de navbar in de header -->
-<div class="navbar">
-<!-- de links in de navbar -->
-      <a class="active" href="" >Home</a>
-      <a href="admin-pannel.php">admin pannel</a>
-      <a href="view/read.php">Boeken</a>
-      <a href="../account\logout.php">log uit</a>
-      <a href="../account/login/login.php">inloggen/registreren</a>
-      <a href="">Reservaties (komt nog)</a>
-  </div>
+        <!-- de navbar in de header -->
+        <div class="navbar">
+            <!-- de links in de navbar -->
+            <a class="active" href="#">Home</a>
+            <a href="admin-pannel.php">admin panel</a>
+            <a href="view/read.php">Boeken</a>
+            <a href="../account/logout.php" onclick="return confirmLogout();">logout</a>
+            <a href="#">Reservaties (komt nog)</a>
+        </div>
     </div>';
 } else if ($role === "Medewerker") {
     echo '<div class="header">
@@ -32,85 +25,33 @@ if ($role === 'Admin') {
             <!-- de links in de navbar -->
             <a class="active" href="">Home</a>
             <a href="view/read.php">Boeken</a>
-            <a href="../account/logout.php">log uit</a>
+            <a href="../account/logout.php" onclick="return confirmLogout();">log uit</a>
             <a href="">Reservaties (komt nog)</a>
         </div>
     </div>';
-} else if ($role === "Lid") {
+} else if ($role === "Lezer") {
     echo '<div class="header">
         <h1 style="float: left;">FIRDA lid</h1>
         <!-- de navbar in de header -->
         <div class="navbar">
             <!-- de links in de navbar -->
-            <a class="active" href="" target="_blank" rel="noopener noreferrer">Home</a>
+            <a class="active" href="#" rel="noopener noreferrer">Home</a>
             <a href="view/read.php">Boeken</a>
-            <a href="../account/logout.php">log uit</a>
+            <a href="../account/logout.php" onclick="return confirmLogout();">log uit</a>
             <a href="">Reservaties (komt nog)</a>
         </div>
     </div>';
-} else {
+} else if ($role === "") { // Check for empty value
     echo '<div class="header">
         <h1 style="float: left;">FIRDA</h1>
         <!-- de navbar in de header -->
         <div class="navbar">
             <!-- de links in de navbar -->
-            <a class="active" href="../index.php">Home</a>
-            <a href="read.php">Boeken</a>
-            <a href="../account/signup/register.index.php" target="_blank" rel="noopener noreferrer">word lid</a>
-            <a href="./account/login/login.php" target="_blank" rel="noopener noreferrer">login</a>
+            <a class="active" href="#">Home</a>
+            <a href="view/read.php">Boeken</a>
+            <a href="../account/signup/register.index.php" rel="noopener noreferrer">word lid</a>
+            <a href="../account/login/login.php" rel="noopener noreferrer">login</a>
         </div>
     </div>';
 }
->>>>>>> c83a5d4c1371a046ccf09c6c54eceba9ec27d3ae
-
-// if ($role === 'Admin') {
-//     echo '<div class="header">
-//         <h1 style="float: left;">FIRDA admin</h1>
-//         <!-- de navbar in de header -->
-//         <div class="navbar">
-//             <!-- de links in de navbar -->
-//             <a class="active" href="#">Home</a>
-//             <a href="admin-pannel.php">admin panel</a>
-//             <a href="view/read.php">Boeken</a>
-//             <a href="../account/logout.php" onclick="return confirmLogout();">logout</a>
-//             <a href="#">Reservaties (komt nog)</a>
-//         </div>
-//     </div>';
-// } else if ($role === "Medewerker") {
-//     echo '<div class="header">
-//         <h1 style="float: left;">FIRDA medewerker</h1>
-//         <!-- de navbar in de header -->
-//         <div class="navbar">
-//             <!-- de links in de navbar -->
-//             <a class="active" href="">Home</a>
-//             <a href="view/read.php">Boeken</a>
-//             <a href="../account/logout.php" onclick="return confirmLogout();">log uit</a>
-//             <a href="">Reservaties (komt nog)</a>
-//         </div>
-//     </div>';
-// } else if ($role === "Lezer") {
-//     echo '<div class="header">
-//         <h1 style="float: left;">FIRDA lid</h1>
-//         <!-- de navbar in de header -->
-//         <div class="navbar">
-//             <!-- de links in de navbar -->
-//             <a class="active" href="#" rel="noopener noreferrer">Home</a>
-//             <a href="view/read.php">Boeken</a>
-//             <a href="../account/logout.php" onclick="return confirmLogout();">log uit</a>
-//             <a href="">Reservaties (komt nog)</a>
-//         </div>
-//     </div>';
-// } else if ($role === "") { // Check for empty value
-//     echo '<div class="header">
-//         <h1 style="float: left;">FIRDA</h1>
-//         <!-- de navbar in de header -->
-//         <div class="navbar">
-//             <!-- de links in de navbar -->
-//             <a class="active" href="#">Home</a>
-//             <a href="view/read.php">Boeken</a>
-//             <a href="../account/signup/register.index.php" rel="noopener noreferrer">word lid</a>
-//             <a href="../account/login/login.php" rel="noopener noreferrer">login</a>
-//         </div>
-//     </div>';
-// }
 ?>
