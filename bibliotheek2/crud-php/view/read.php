@@ -7,7 +7,6 @@ $result = mysqli_query($conn, $sql);
 if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     $filter = $_GET['filter'];
     $filter_query = $_GET['filter_query'];
-
     // Prepare the query using placeholders
     $sql = "SELECT * FROM boeken WHERE $filter LIKE ?";
     $stmt = mysqli_prepare($conn, $sql);
@@ -35,8 +34,8 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
 
 <body>
     <div class="navbar">
-        <div class="nav-item"><a href="../index.html">Home</a></div>
-        <div class="nav-item"><a href="../../account (1)/login/login.php">Login</a></div>
+        <div class="nav-item"><a href="../index.php">Home</a></div>
+        <div class="nav-item"><a href="../../account/login/login.php">Login</a></div>
         <div class="nav-item"><a href="#">Services</a></div>
         <div class="nav-item"><a href="#">Contact</a></div>
         <?php if (isset($_SESSION['role']) && ($_SESSION['role'] == 'Medewerker' || $_SESSION['role'] == 'Admin')) { ?>
