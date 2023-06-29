@@ -34,23 +34,14 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     <link rel="stylesheet" href="../style.css">
     <title>Crud</title>
 </head>
-    
-
-
 <body> 
-<?php
-  include("../navbar.php")
-  ?>
-
-    <div class="navbar">
-        <div class="nav-item"><a href="../index.php">Home</a></div>
-        <div class="nav-item"><a href="../../account/login/login.php">Login</a></div>
-        <div class="nav-item"><a href="#">Services</a></div>
-        <div class="nav-item"><a href="#">Contact</a></div>
-        <?php if (isset($_SESSION['role']) && ($_SESSION['role'] == 'Medewerker' || $_SESSION['role'] == 'Admin')) { ?>
-            <div class="nav-item"><a href="../view/create.php">Create</a></div>
-        <?php } ?>
-    </div>
+<?php 
+if (!function_exists('prevent_sql_injection')) {
+    function prevent_sql_injection($data) {
+        $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("../navbar.php"); 
+    }
+}
+?>
 
 <!--filter systeem-->
     <div class="sidebar">
