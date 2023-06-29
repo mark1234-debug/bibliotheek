@@ -34,9 +34,6 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     <link rel="stylesheet" href="../style.css">
     <title>Crud</title>
 </head>
-    
-
-
 <body> 
 <?php 
 if (!function_exists('prevent_sql_injection')) {
@@ -44,7 +41,6 @@ if (!function_exists('prevent_sql_injection')) {
         $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("../navbar.php"); 
     }
 }
-
 ?>
 
 <!--filter systeem-->
