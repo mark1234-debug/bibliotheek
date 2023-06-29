@@ -23,7 +23,7 @@
             <a class="btn verzameling" href="view/read.php">bekijk onze verzameling</a>
             <?php
 if (empty($_SESSION['role'])) {
-    echo '<a class="btn word_lid" href="../account (1)/signup/register.index.php">Word lid</a>';
+    echo '<a class="btn word_lid" href="../account/signup/register.index.php">Word lid</a>';
 }
 ?>
         </div>
