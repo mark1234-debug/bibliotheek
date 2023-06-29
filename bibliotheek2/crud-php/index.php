@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
 </head>
 
 <body>
-<?php $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); ?>
+<?php session_start(); $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); ?>
 
     <img class="achtergrond" src="uploads/simple-bookshelf.jpg" alt="achtergrond">
     <div class="front">

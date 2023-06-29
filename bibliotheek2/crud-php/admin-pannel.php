@@ -15,7 +15,7 @@
 <div class="tab">
   <button class="tablinks" onclick="openPopup('./view/schrijvercrudview.php')">Schrijver CRUD</button>
   <button class="tablinks" onclick="openPopup('../employees-crud/home.php')">Employees CRUD</button>
-  <button class="tablinks" onclick="openPopup('../account (1)/login/login.php')">Login</button>
+  <button class="tablinks" onclick="openPopup('../account/login/login.php')">Login</button>
   <button class="tablinks" onclick="openPopup('./view/read.php')">Read</button>
   <button class="tablinks" onclick="openPopup('./view/create.php')">Create</button>
 </div>
