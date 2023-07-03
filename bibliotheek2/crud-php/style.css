@@ -59,10 +59,6 @@ color: #fff;
   flex-wrap: wrap;
 }
 
-.container{
-  display: flex;
-  flex-wrap: wrap;
-}
 
 .boek1{ /*de achtergrond van de boeken informatie tegels*/
   background-color: rgb(195, 214, 210);
