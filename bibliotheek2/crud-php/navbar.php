@@ -54,7 +54,7 @@ if ($role === 'Admin') {
         </div>
     </div>';
 }
->>>>>>> c83a5d4c1371a046ccf09c6c54eceba9ec27d3ae
+
 
 // if ($role === 'Admin') {
 //     echo '<div class="header">
