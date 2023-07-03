@@ -174,8 +174,8 @@ body{
 .popup {
   display: none;
   float: left;
-  width: 70%;
-  height: 818px;
+  width: 75%;
+  height: 860px;
   padding: 20px;
   background-color: white;
   border: 1px solid #ffcd00;
@@ -186,8 +186,8 @@ body{
 .tab {
   float: left;
   background-color: #687474;
-  width: 27.67%;
-  height: 858px;
+  width: 25%;
+  height: 860px;
   border: 1px solid #ffcd00;
 }
 
