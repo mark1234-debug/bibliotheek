@@ -2,8 +2,7 @@
 
 include "db_conn.php";
 
-$role = $_SESSION['role'] ?? '';
-
+$role = 'Admin'
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +19,14 @@ $role = $_SESSION['role'] ?? '';
 
     <?php if ($role === 'Admin' || $role === 'Medewerker'): ?>
         <a href="admin-pannel.php" <?php if ($activeTab === 'admin') echo 'class="active"'; ?>>Admin Panel</a>
-    <?php elseif ($role === 'Lid'): ?>
-        <a href="#" <?php if ($activeTab === 'logout') echo 'class="active"'; ?>>Log out</a>
+        <?php endif; ?>
+    <?php if ($role === 'Admin' || $role === 'Medewerker' || $role === 'Lid'): ?>
         <a href="#" <?php if ($activeTab === 'reservaties') echo 'class="active"'; ?>>Reservaties</a>
-    <?php elseif ($role === ''): ?>
+        <a href="#" <?php if ($activeTab === 'logout') echo 'class="active"'; ?>>Log out</a>
+        <?php endif; ?>
+    <?php if ($role === ''): ?>
         <a href="#" <?php if ($activeTab === 'login') echo 'class="active"'; ?>>Log in</a>
-    <?php endif; ?>
+        <?php endif; ?>
 </div>
 
 </div>
