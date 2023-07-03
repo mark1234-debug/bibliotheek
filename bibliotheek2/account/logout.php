@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 session_start();
 
@@ -12,5 +11,3 @@ session_destroy();
 header('Location: ../account/login/login.php');
 exit();
 ?>
-=======
->>>>>>> c83a5d4c1371a046ccf09c6c54eceba9ec27d3ae

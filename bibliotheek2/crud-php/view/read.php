@@ -38,7 +38,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
 <?php 
 if (!function_exists('prevent_sql_injection')) {
     function prevent_sql_injection($data) {
-        $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("../navbar.php"); 
+        $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); 
     }
 }
 ?>

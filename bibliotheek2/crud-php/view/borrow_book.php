@@ -1,6 +1,6 @@
 <?php
 
-include "../db_conn.php";
+include "db_conn.php";
 
 if (isset($_POST['uitlenen'])) {
     $boek_id = $_POST['boek_id'];
