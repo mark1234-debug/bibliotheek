@@ -73,7 +73,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
                             <div class="boek1">
                                 <div class="col-md-4">
                                     <!--het plaatje-->
-                                    <a href="../book_details.php?id=<?=$rows['boek_id']?>"> <!--als je op het plaatje klikt kom je op een pagina met meer info over het boek-->
+                                    <a href="../book_details.php?boek_id=<?=$rows['boek_id']?>"> <!--als je op het plaatje klikt kom je op een pagina met meer info over het boek-->
                                         <?php if (!empty($rows['image'])) { ?>
                                             <img src="../uploads/<?=$rows['image']?>" alt="<?=$rows['titel']?>" width="100">
                                         <?php } else { ?>

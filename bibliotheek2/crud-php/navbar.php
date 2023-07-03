@@ -50,7 +50,7 @@ if ($role === 'Admin') {
             <a class="active" href="#">Home</a>
             <a href="view/read.php">Boeken</a>
             <a href="../account/signup/register.index.php" rel="noopener noreferrer">word lid</a>
-            <a href="../account/login/login.php" rel="noopener noreferrer">login</a>
+            <a href="./account/login/login.php" rel="noopener noreferrer">login</a>
         </div>
     </div>';
 }
