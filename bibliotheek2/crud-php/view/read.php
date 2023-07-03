@@ -1,6 +1,9 @@
 <?php
 
-include "../db_conn.php";
+include "db_conn.php";
+
+session_start(); $_SESSION['activeTab'] = 'boeken'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); 
+
 $sql = "SELECT * FROM boeken";
 $result = mysqli_query($conn, $sql);
 
@@ -35,13 +38,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     <title>Crud</title>
 </head>
 <body> 
-<?php 
-if (!function_exists('prevent_sql_injection')) {
-    function prevent_sql_injection($data) {
-        $_SESSION['activeTab'] = 'home'; $activeTab = $_SESSION['activeTab']; include_once("../navbar.php"); 
-    }
-}
-?>
+
 
 <!--filter systeem-->
     <div class="sidebar">

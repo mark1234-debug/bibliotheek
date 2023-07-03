@@ -57,7 +57,7 @@
                 <select name="schrijver" class="form-control" id="Schrijver" placeholder="Wie is de schrijver?">
                     <option value="" >Selecteer een schrijver</option>
                     <?php
-                    include "../db_conn.php";
+                    include "db_conn.php";
 
                     // Retrieve schrijvers from the database
                     $query = "SELECT * FROM schrijvers";
@@ -93,7 +93,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
             <a href="read.php" class="link-primary">View</a>
-            <a href="../index.html">Home</a> <!--naar de home pagina-->
+            <a href="index.php">Home</a> <!--naar de home pagina-->
         </form>
     </div>
 </body>

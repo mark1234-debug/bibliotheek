@@ -1,5 +1,5 @@
 <?php
-include_once '../db_conn.php';
+include_once 'db_conn.php';
 
 $error_message = "";
 
@@ -89,8 +89,8 @@ mysqli_close($conn);
                 <textarea name="beschrijving" class="form-control" id="beschrijving" placeholder="Voeg een beschrijving toe"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
-            <a href="../view/read.php" class="link-primary">View</a>
-            <a href="../index.html">Home</a> <!--naar de home pagina-->
+            <a href="read.php" class="link-primary">View</a>
+            <a href="index.php">Home</a> <!--naar de home pagina-->
         </form>
     </div>
 </body>
