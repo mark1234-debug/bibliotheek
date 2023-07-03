@@ -1,5 +1,5 @@
 <?php
-include "../db_conn.php";
+/*include "./db_conn.php";
 
 if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     $filter = $_GET['filter'];
@@ -22,7 +22,7 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     $result = mysqli_query($conn, $sql);
 }
 
-include("../navbar.php");
+include("./navbar.php");
 ?>
 
 <!DOCTYPE html>
