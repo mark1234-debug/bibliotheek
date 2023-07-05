@@ -19,7 +19,7 @@ if (isset($_POST['naam'])) {
         if (mysqli_stmt_execute($stmt)) {
             mysqli_stmt_close($stmt);
             mysqli_close($conn);
-            header("Location: ../view/read.php");
+            header("Location: read.php");
             exit();
         } else {
             $error_message = "ERROR: Could not execute $sql. " . mysqli_error($conn);
@@ -29,13 +29,8 @@ if (isset($_POST['naam'])) {
     }
 }
 
-// Uncomment the following lines to display errors and debug information
-error_reporting(E_ALL);
-ini_set('display_errors', true);
-
-var_dump($_POST);
-
 mysqli_close($conn);
+
 ?>
 
 <!DOCTYPE html>
@@ -44,9 +39,34 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
+    <title>Create Schrijver</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container {
+            margin-top: 50px;
+            width: 400px;
+        }
+
+        .container h1 {
+            margin-bottom: 30px;
+        }
+
+        .alert {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            margin-right: 10px;
+        }
+
+        .link-primary {
+            margin-left: 10px;
+        }
+    </style>
     <script>
         function validateForm() {
             // Retrieve the form input values
@@ -75,7 +95,7 @@ mysqli_close($conn);
             <div class="alert alert-danger"><?php echo $error_message; ?></div>
         <?php endif; ?>
         <form action="../model/schrijvercrudmodel.php" method="post" onsubmit="return validateForm()">
-            <div class="alles">
+            <div class="form-group">
                 <label for="naam">Naam:</label>
                 <input type="text" name="naam" class="form-control" id="naam" placeholder="Vul de naam in" required>
                 
@@ -89,9 +109,7 @@ mysqli_close($conn);
                 <textarea name="beschrijving" class="form-control" id="beschrijving" placeholder="Voeg een beschrijving toe"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Create</button>
-            <a href="read.php" class="link-primary">View</a>
-            <a href="index.php">Home</a> <!--naar de home pagina-->
-        </form>
-    </div>
-</body>
+            <a href="read.php" class="btn btn-link">View</a>
+            <a href="index.php" class="btn btn-link">Home</a> <!--naar de home pagina-->
+    </body>
 </html>

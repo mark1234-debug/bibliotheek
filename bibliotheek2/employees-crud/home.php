@@ -27,9 +27,6 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <a href="../account (1)/login/login.php">login</a>
-                <a href="../account (1)/signup/register.php">register</a>
-                <a href="../crud-php/view/read.php">read</a>
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Employees Details</h2>
@@ -37,7 +34,7 @@
                     </div>
                     <?php
                     // Include config file
-                    require_once "../crud-php/db_conn.php";
+                    require_once "../crud-php/view/db_conn.php";
                     
                     // Attempt select query execution
                     $sql = "SELECT * FROM accounts";
