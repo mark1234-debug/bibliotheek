@@ -1,0 +1,9 @@
+{
+    "name": "marknoordmans/bibliotheek",
+    "description": "Your project description",
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true
+        }
+    }
+}

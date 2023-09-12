@@ -1,5 +1,10 @@
 <?php
 include "db_conn.php";
+/**
+ * @uses
+ * hello there
+ * 
+ */
 
 session_start(); $_SESSION['activeTab'] = 'boeken'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); 
 
@@ -79,17 +84,27 @@ if (!$result) {
             place-items: center;
         }
 
-        .bookdetails{
-            display: flex;
-            top: 50px;
-        }
 
-        .image{
-            width: 50px;
-            left: 50px;
-            display: grid;
-            position: absolute;
-        }
+        .main {
+        background-color: rgb(195, 214, 210);
+        width: 1000px;
+        height: 1500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bookdetails {
+        display: grid;
+        gap: 10px;
+    }
+
+    .image {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
     </style>
     <script>
         function showPopup() {
@@ -113,6 +128,7 @@ if (!$result) {
         <p>Publisher: <?=$book['uitgever']?></p>
         <p>Author: <?=$book['schrijver']?></p>
         <p>Description: <?=$book['description']?></p>
+        <a href="">uitlenen</a>
         <!-- Additional book details -->
         </div>
         <div class="image">
