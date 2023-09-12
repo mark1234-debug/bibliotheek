@@ -9,7 +9,6 @@
   
 </head>
 <body>
-
 <?php session_start(); $_SESSION['activeTab'] = 'admin'; $activeTab = $_SESSION['activeTab']; include_once("navbar.php"); ?>
 
 <div class="tab">

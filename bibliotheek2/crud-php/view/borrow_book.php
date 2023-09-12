@@ -9,6 +9,7 @@ $phpdoc;
 
 include "db_conn.php";
 
+
 if (isset($_POST['uitlenen'])) {
     $boek_id = $_POST['boek_id'];
     $gebruiker_id = $_SESSION['id'];

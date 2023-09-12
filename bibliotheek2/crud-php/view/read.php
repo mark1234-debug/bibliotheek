@@ -38,7 +38,30 @@ if (isset($_GET['filter']) && isset($_GET['filter_query'])) {
     <title>Crud</title>
 </head>
 <body> 
+<?php
+$markdownContent = "
+# Hello Markdown
 
+This is a **Markdown** file.
+
+- List item 1
+- List item 2
+";
+
+// Include the Parsedown library
+require_once('Parsedown.php');
+
+// Create a Parsedown instance
+$parsedown = new Parsedown();
+
+// Convert Markdown to HTML
+$htmlContent = $parsedown->text($markdownContent);
+
+// Save the HTML content to a Markdown file
+file_put_contents('output.md', $htmlContent);
+
+echo "Markdown converted and saved as 'output.md'";
+?>
 
 <!--filter systeem-->
     <div class="sidebar">
